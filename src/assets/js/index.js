@@ -3,6 +3,21 @@ document.readyState !== 'loading' ? init() : document.addEventListener('DOMConte
 
 function init(){
 	open_mobile_menu()
+	swiper()
+	open_modal()
+}
+
+
+function open_mobile_menu(){
+	$_('button.hamburger').addEventListener('click', event => {
+		event.target.classList.toggle("is-active")
+		$_("#mobile_menu").classList.toggle('open')
+		
+	})
+}
+
+function swiper(){
+	if(!$_('body').classList.contains('photo-page')) return;
 	load_swiper()
 	 .then(result => {
 	 	if(!result) console.log('%c Ошибка загрузки swiper', 'color: red')
@@ -26,21 +41,10 @@ function init(){
 	 })
 }
 
-
-function open_mobile_menu(){
-	$_('button.hamburger').addEventListener('click', event => {
-		event.target.classList.toggle("is-active")
-		$_("#mobile_menu").classList.toggle('open')
-		
-	})
-}
-
-
-
 async function load_swiper(){
 
 	return new Promise((resolve, reject) => {
-		if(!$_('body').classList.contains('photo-page')) reject(false);
+		
 
 		let script = document.createElement('script')
 		script.src="/vendor/swiper/swiper-bundle.min.js"
@@ -53,7 +57,21 @@ async function load_swiper(){
 
 
 		})
+}
 
-	
+function open_modal(){
+	$$_('header ul.addr li')[2].addEventListener("click", event => {
+		$_("#myModal").style.display = "block"
+		$_('#myModal iframe').src = $_('#myModal iframe').dataset.src
+	})
 
+	$_('.modal-content span.close').addEventListener("click", event => {
+		$_("#myModal").style.display = "none"
+	})
+
+	window.onclick = function(event) {
+  if (event.target == $_("#myModal")) {
+    $_("#myModal").style.display = "none";
+  }
+}
 }

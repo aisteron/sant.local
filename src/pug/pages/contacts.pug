@@ -1,0 +1,47 @@
+extends ../layout/contacts
+
+block variables
+	- var title = "Contacts"
+	- var bodyClass = 'contacts-page'
+
+block content
+	.content
+		.left
+			p "КАНАШОПТПРОДТОРГ"
+			p г. Канаш, ул. Котовского, 2, склад 22 <br> после въезда направо
+
+			p
+				b График работы
+			ul.hours
+				li
+					span.day Пн - Пт
+					span.hours 7:30 - 17:00
+				li
+					span.day Сб
+					span.hours 7:30 - 16:00
+				li
+					span.day Вс
+					span.hours 7:30 - 15:00
+
+			ul.phone
+				li
+					a.tel(href="tel:+79083008830")
+						img(src="/assets/img/icons/phone.svg" width="15" height="15")
+						span +7 (908) 300-88-30
+				li
+					a.viber(href="viber://chat/?number=%2B79083008830")
+						img(src="/assets/img/icons/viber.svg" width="16" height="18")
+						span Viber
+				li
+					a.wa(href="https://api.whatsapp.com/send?phone=79083008830")
+						img(src="/assets/img/icons/wa.svg" width="17" height="17")
+						span WhatsApp	
+				li
+					a.wa(href="https://api.whatsapp.com/send?phone=79083008830")
+						img(src="/assets/img/icons/envelope.svg" width="17" height="17")
+						span xaer@inbox.ru
+		.right
+			iframe(src="https://yandex.ru/map-widget/v1/?z=18&ol=biz&oid=1783556228" width="560" height="400" frameborder="0")
+
+
+		

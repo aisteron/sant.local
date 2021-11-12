@@ -1,0 +1,16 @@
+block variables
+
+
+doctype html
+html(lang='ru')
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name="description", content = description )
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+body(class=bodyClass)
+	.wrapper
+		include ../includes/ui/header.pug
+		block content	
+		include ../includes/ui/footer.pug

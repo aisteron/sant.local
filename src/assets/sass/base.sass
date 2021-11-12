@@ -67,3 +67,44 @@ a
 	@media(max-width: 970px)
 		width: 100%
 		padding: 0 1rem		
+
+.modal
+	display: none
+	position: fixed
+	z-index: 1
+	letf: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: rgba(0,0,0,0.4)
+
+.modal-content
+	background: #fff
+	margin: 15% auto
+	//padding: 1rem
+	width: 560px
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+	animation-name: animatetop
+	animation-duration: 0.4s
+	position: relative
+
+@keyframes animatetop
+	from
+		top: -300px
+		opacity: 0
+	to
+		top: 0
+		opacity: 1
+
+
+.close
+	color: #aaa
+	float: right
+	font-size: 28px
+	font-weight: bold
+	cursor: pointer
+	margin-right: 1rem	
+
+.map-widget-content-view__container._ready
+	max-height: 130px

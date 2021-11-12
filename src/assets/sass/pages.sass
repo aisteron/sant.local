@@ -4,6 +4,7 @@ body
 			display: flex
 			justify-content: space-between
 			flex-wrap: wrap
+			min-height: 70vh
 			.item
 				width: 250px
 				@media(max-width: 530px)
@@ -15,4 +16,43 @@ body
 					margin: 10px
 	&.photo-page
 		.swiper
-	    margin-top:  1rem				
+	    margin-top:  1rem
+	    min-height: 70vh
+	&.about-page
+		.content
+			min-height: 70vh
+			p
+				color: $red
+	&.contacts-page
+		.content
+			min-height: 70vh
+			color: $red
+			display: inline-flex
+			justify-content: space-between
+			flex-wrap: wrap
+			width: 100%
+			margin-top: 1rem
+			p:first-of-type
+				margin-top: 0
+			ul
+				line-height: 200%
+				&.hours
+					margin-bottom: 1rem
+					li
+						width: 150px
+						display: flex
+						justify-content: space-between
+				&.phone
+					li
+						a
+							display: flex
+							align-items: center
+						img
+							margin-right: 10px
+			iframe
+				@media(max-width: 500px)
+					margin-top: 1rem
+					width: 92vw
+
+
+					    			
