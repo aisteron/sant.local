@@ -1,0 +1,106 @@
+header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	color: $red
+	font-size: 1rem
+	@media(max-width: 970px)
+		display: block
+
+	@media(max-width: 700px)
+		display: none
+		
+	ul.phone
+		a	
+			&:hover
+				text-decoration: underline
+		li
+			line-height: 28px
+			img
+				margin-right: 20px
+			a
+				display: flex
+				align-items: center	
+
+	ul.addr
+		li
+			display: flex
+			align-items: center
+			line-height: 28px
+			&:nth-of-type(2)
+				padding-left: 36px
+			img
+				margin-right: 20px
+
+nav
+	font-family: 'bernier_shaderegular'
+	font-size: 30px
+	margin-top: 30px
+	border-bottom: 4px dotted $yellow
+	padding-bottom: 14px
+	@media(max-width: 700px)
+		display: none
+	ul
+		display: flex
+		justify-content: space-between
+	a
+		color: #707070
+		&:hover
+			color: $red
+	li.active a
+		color: $red											
+
+footer
+	background: $red
+	height: 71px
+	margin: 0 calc(50% - 50vw)
+	display: flex
+	align-items: center
+	margin-top: 3rem
+	span
+		color: $sand
+
+button.hamburger
+	span
+		pointer-events: none
+
+#mobile_header
+	background: $red
+	margin: 0 -1rem 
+	padding: 0 1rem
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	@media(min-width: 700px)
+		display: none
+	a
+		color: $sand
+		&.name
+			span
+				display: block
+				&:last-of-type
+					font-size: 12px
+					font-style: italic
+	button.hamburger
+		margin-right: -6px
+
+#mobile_menu
+	position: absolute
+	z-index: 20
+	background: $red
+	margin-left: -1rem
+	padding-left: 1rem
+	border-top: 1px solid #CE5A50
+	//padding-top: 1rem
+	width: 70%
+	display: none
+	height: 100vh
+	&.open
+		display: block
+	li
+		font-family: 'bernier_shaderegular'
+		font-size: 30px
+		line-height: 200%
+	a
+		color: $sand					

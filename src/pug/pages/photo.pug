@@ -1,0 +1,28 @@
+extends ../layout/photo
+
+block variables
+	- var title = "Photogallery"
+	- var bodyClass = 'photo-page'
+
+block content
+	.swiper
+		.swiper-wrapper
+			.swiper-slide
+				picture
+					source(srcset="/assets/img/gal/01.avif" type="image/avif")
+					source(srcset="/assets/img/gal/01.jpg" type="image/jpeg")
+					img(src="/assets/img/gal/01.jpg" width="960" height="480")
+			.swiper-slide
+				img(data-src="/assets/img/gal/02.jpg")
+			.swiper-slide
+				img(data-src="/assets/img/gal/03.jpg")
+			.swiper-slide
+				img(data-src="/assets/img/gal/04.jpg")
+			.swiper-slide
+				img(data-src="/assets/img/gal/05.jpg")
+			.swiper-slide
+				img(data-src="/assets/img/gal/06.jpg")
+			.swiper-slide
+				img(data-src="/assets/img/gal/07.jpg")
+		.swiper-pagination
+		

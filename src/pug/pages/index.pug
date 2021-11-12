@@ -1,23 +1,33 @@
-extends ../layout/main
+extends ../layout/index
 
 block variables
-  - var title = 'Webpack + Pug';
-  - var description = 'Description for Webpack + Pug';
-  - var pageClass = 'index-page';
+	- var title = "Index"
+	- var bodyClass = 'index-page'
 
 block content
-  section
-    .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-  example-component
-
-
-block script
-  script(type='text/javascript').
-    const foo = true;
-    let bar = function() {};
-    if (foo) {
-    bar(1 + 5)
-    }
+	.categories
+		
+		.item
+			img(src="/assets/img/index/01.png")
+			span Электроинструмент
+		
+		.item
+			img(src="/assets/img/index/02.png")
+			span Бензоинструмент
+		
+		.item
+			img(src="/assets/img/index/03.png")
+			span Аккумуляторный <br> инструмент 
+		
+		.item
+			img(src="/assets/img/index/04.png")
+			span Отопительная <br> система
+		
+		.item
+			img(src="/assets/img/index/05.png")
+			span Канализация <br> и водопровод
+		
+		.item
+			img(src="/assets/img/index/02.png")
+			span Хозтовары
+		
